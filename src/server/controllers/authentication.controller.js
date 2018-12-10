@@ -8,7 +8,7 @@ exports.login = (request, response) => {
        email: 'fode.diop@students.makeschool.com'
    }
 
-   jwt.sign({user}, 'secretsecretkey', (error, token) => {
+   jwt.sign({user}, process.env.SECRET, (error, token) => {
        res.json({
            token
        })
