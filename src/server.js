@@ -22,7 +22,7 @@ mongoose.connect(dbConfig.url, {
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.get('/', (request, response) => response.send({message: `Token Orderbook API Endpoints`}))
+app.get('/', (request, response) => response.send({message: `Trustless Token Orderbook API Endpoints`}))
 
 require('./server/routes/order.routes.js')(app)
 app.listen(port, () => console.log(`Webserver is running on ${port}...`))

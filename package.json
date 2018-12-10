@@ -1,7 +1,7 @@
 {
   "name": "orderbook-api",
   "version": "1.0.0",
-  "description": "Trustess Tocken Exchange Orderbook",
+  "description": "Trustless Tocken Exchange Orderbook",
   "main": "src/server.js",
   "directories": {
     "test": "test"
