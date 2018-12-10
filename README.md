@@ -28,15 +28,15 @@ Retrieves a list of orders given query parameters.
 
 ### Order specific parameters:
 
-``` exchangeAddress ``` [string]: returns orders created for this exchange address
-``` senderAddress ``` [string]: returns orders with the specified senderAddress
-``` makerAssetData ``` [string]: returns orders with the specified makerAssetData
-``` takerAssetData ``` [string]: returns orders with the specified takerAssetData
-``` traderAssetData ``` [string]: returns orders where either makerAssetData or takerAssetData has the value specified
-``` makerAddress ``` [string]: returns orders with the specified makerAddress
-``` takerAddress ``` [string]: returns orders with the specified takerAddress
-``` traderAddress ``` [string]: returns orders where either makerAddress or takerAddress has the value specified
-``` feeRecipientAddress ``` [string]: returns orders where feeRecipientAddress is feeRecipient address
+* ``` exchangeAddress ``` [string]: returns orders created for this exchange address
+* ``` senderAddress ``` [string]: returns orders with the specified senderAddress
+* ``` makerAssetData ``` [string]: returns orders with the specified makerAssetData
+* ``` takerAssetData ``` [string]: returns orders with the specified takerAssetData
+* ``` traderAssetData ``` [string]: returns orders where either makerAssetData or takerAssetData has the value specified
+* ``` makerAddress ``` [string]: returns orders with the specified makerAddress
+* ``` takerAddress ``` [string]: returns orders with the specified takerAddress
+* ``` traderAddress ``` [string]: returns orders where either makerAddress or takerAddress has the value specified
+* ``` feeRecipientAddress ``` [string]: returns orders where feeRecipientAddress is feeRecipient address
 
 ## POST /order
 Submit a signed order to the DEX.
