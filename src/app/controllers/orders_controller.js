@@ -1,4 +1,4 @@
-const Order = require('../models/order.model.js')
+const Order = require('../models/order.js')
 
 // Create and save Order
 exports.create = (request, response) => {

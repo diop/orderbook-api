@@ -2,12 +2,12 @@
   "name": "orderbook-api",
   "version": "1.0.0",
   "description": "Trustless Tocken Exchange Orderbook",
-  "main": "src/server.js",
+  "main": "src/app.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node src/app.js",
     "test": "mocha || true"
   },
   "engines": {

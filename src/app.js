@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const port = process.env.PORT || 3000
 const morgan = require('morgan')
 
-const dbConfig = require('./server/config/database.config')
+const dbConfig = require('./app/config/database.config')
 const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
@@ -24,6 +24,6 @@ app.use(bodyParser.json())
 
 app.get('/', (request, response) => response.send({message: `Trustless Token Orderbook API Endpoints`}))
 
-require('./server/controllers/authentication.controller')(app)
-require('./server/routes/order.routes')(app)
+require('./app/controllers/sessions_controller')(app)
+require('./config/routes/orders_router')(app)
 app.listen(port, () => console.log(`Webserver is running on ${port}...`))
