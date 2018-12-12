@@ -1,5 +1,6 @@
 ## BEW 1.2 Fall 2018 Final Project
-<strong>OkayRelay</strong> is a trustless token trading orderbook API. 
+<strong>OkayRelay</strong> is a trustless token trading orderbook API.
+* [https://okayrelay-orderbook.herokuapp.com/](https://okayrelay-orderbook.herokuapp.com/)
 
 ## Terms:
 * An ```orderbook``` is a list of buy or sell orders sorted by price and timestamp.
@@ -29,8 +30,8 @@ We hosts an off-chain orderbook which provides a way for users to add, remove an
 }
 ```
 
-# API Documentation
-V 1.0 - 12 December 2018
+# API Documentation - V 1.0 - 12 December 2018
+* [https://diop.github.io/orderbook-api/](https://diop.github.io/orderbook-api/) 
 
 ## Order Specific Parameters:
 
