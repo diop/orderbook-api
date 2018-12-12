@@ -85,7 +85,7 @@ module.exports = app => {
         Order
             .findById(id)
             .then(order => {
-                response.redirect(`/orders/` + order._id)
+                response.json(order)
             })
             .catch(error => {
                 console.log(error.message)
