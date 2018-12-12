@@ -1,32 +1,38 @@
-## BEW Final Project 
-Trustless Token Trading Orderbook inspired by the 0xProject Protocol. An orderbook is a list of buy or sell orders sorted by price and timestamp.
+## BEW 1.2 Fall 2018 Final Project
+<strong>OkayRelay</strong> is a trustless token trading orderbook API. 
 
-## Instructions from within this repo:
+## Terms:
+* An ```orderbook``` is a list of buy or sell orders sorted by price and timestamp.
+* A ```relayer``` is any party or entity which hosts an off-chain orderbook.
 
-To install all required modules:
+## OkayRelay Overview
+We hosts an off-chain orderbook which provides a way for users to add, remove and update this orderbook through an API (and a GUI in the future). We help traders discover counter-parties and ferry cryptographically signed orders betwen them. Once two parties agree on the terms of an order, the order is settled directly on the Ethereum blockchain via the 0x protocol smart contracts.
+
+## Relayer Registry Information:
 ```
-$ npm install
+"19d099da-775b-4fd0-9b1e-f622d8db9019": {
+    "name": "Okay Relay",
+    "homepage_url": "https://okayrelay.com",
+    "app_url": "https://app.okayrelay.com",
+    "header_img": "okayrelayheader.png",
+    "logo_img": "okayrelaylogo.png",
+    "networks": [
+        {
+            "networkId": 1,
+            "sra_http_endpoint": "https://api.okayrelay.com/0x/v2/",
+            "sra_ws_endpoint": "ws://api.okayrelay.com/0x/v2/",
+            "static_order_fields": {
+                "fee_recipient_addresses": ["0x1111111111111111111111111111111111111111"]
+            }
+        }
+    ]
+}
 ```
 
-To import mock oder data into Mongo:
-```
-$ mongoimport --host=127.0.0.1 -d orderbook-api -c orders --type csv --file orders.csv --headerline
-```
+# API Documentation
+V 1.0 - 12 December 2018
 
-To run the server:
-```
-$ node src/server.js
-```
-
-The API endpoint will be serving at:
-```
-http://localhost:3000/orders
-```
-
-## GET /orders
-Retrieves a list of orders given query parameters.
-
-### Order specific parameters:
+## Order Specific Parameters:
 
 * ``` exchangeAddress ``` [string]: returns orders created for this exchange address
 * ``` senderAddress ``` [string]: returns orders with the specified senderAddress
@@ -38,8 +44,29 @@ Retrieves a list of orders given query parameters.
 * ``` traderAddress ``` [string]: returns orders where either makerAddress or takerAddress has the value specified
 * ``` feeRecipientAddress ``` [string]: returns orders where feeRecipientAddress is feeRecipient address
 
-## POST /order
-Submit a signed order to the DEX.
+## GET /api/orders
+Retrieves a list of orders given query parameters.
+
+## GET /api/orders/:id
+
+## POST /api/orders
+
+## PUT /api/orders/:id
+
+## DELETE /api/orders/:id
+
+## GET /api/users
+
+## GET /api/users/:id
+
+## POST /api/users
+
+## PUT /api/users/:id
+
+## DELETE /api/users/:id
+
+## GET /api/orderbook
+Retrieves the orderbook for a given asset pair.
 
 ### Sample Payload 
 ```
@@ -61,5 +88,4 @@ Submit a signed order to the DEX.
 }
 ```
 
-## GET /orderbook
-Retrieves the orderbook for a given asset pair.
+© Copyright 2018 Fodé Diop, Computer Science Student at Make School - MIT License

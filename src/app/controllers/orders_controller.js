@@ -1,4 +1,4 @@
-const Order = require('../models/order.model.js')
+const Order = require('../models/order.js')
 
 // Create and save Order
 exports.create = (request, response) => {
@@ -13,11 +13,12 @@ exports.create = (request, response) => {
         content: request.body.content
     })
 
-    order.save()
-    .then(data => {
-        response.send(data)
-    }).catch(error => {
-        res.status(500).send({
+    order
+        .save()
+        .then(data => {
+            response.send(data)
+        }).catch(error => {
+            res.status(500).send({
             message: error.message || 'An error occured while creating the order.'
         })
     })
@@ -25,11 +26,12 @@ exports.create = (request, response) => {
 
 // Retrieve and return all orders from the database
 exports.findAll = (request, response) => {
-    Order.find()
-    .then(orders => {
-        response.send(orders)
-    }).catch(error => {
-        response.status(500).send({
+    Order
+        .find()
+        .then(orders => {
+            response.send(orders)
+        }).catch(error => {
+            response.status(500).send({
             message: error.message || 'Some errors occured while retrieving orders'
         })
     })
@@ -45,7 +47,8 @@ exports.findOne = (request, response) => {
             })
         }
         response.send(order)
-    }).catch(error => {
+    })
+    .catch(error => {
         if (error.kind === 'ObjectId') {
             return response.status(404).send({
                 message: 'Order not found with id ' + request.params.orderId
@@ -76,7 +79,8 @@ exports.update = (request, response) => {
             })
         }
         response.send(order)
-    }).catch(error => {
+    })
+    .catch(error => {
         if (error.kind === 'ObjectId') {
             return response.status(404).send({
                 message: 'Order not found with id ' + request.params.orderId
@@ -98,7 +102,8 @@ exports.delete = (request, response) => {
             })
         }
         response.send({ message: 'Order deleted successfuly!' })
-    }).catch(error => {
+    })
+    .catch(error => {
         if (error.kind === 'ObjectId' || error.name === 'NotFound') {
             return response.status(404).send({
                 message: 'Order not found with id ' + request.params.orderId

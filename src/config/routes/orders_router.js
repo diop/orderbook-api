@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    const orders = require('../controllers/order.controller')
+    const orders = require('../../app/controllers/orders_controller')
 
     app.post('/orders', orders.create)
     app.get('/orders', orders.findAll)
