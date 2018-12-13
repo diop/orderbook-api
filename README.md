@@ -39,34 +39,28 @@ wss://api.okayrelay.com/
 
 ## POST /login
 ```
-curl -X POST http://api.okayrelay.com/login -i -u foo:bar -d "access_token=API_KEY_HERE"
-
+curl -X POST http://api.okayrelay.com/login -i -u foo:bar -d "access_token=API_ACCESS_TOKEN"
 ```
 
 ## POST /sign-up
 ```
-curl -X POST http://api.okayrelay.com/sign-up -i -d "username=foo&password=bar&access_token=API_KEY_HERE"
-
+curl -X POST http://api.okayrelay.com/sign-up -i -d "username=foo&password=bar&access_token=API_ACCESS_TOKEN"
 ```
 
 ## GET /orders
 Retrieves a list of orders given query parameters.
 
 ## GET /orders/:id
+Retrieve a single order by Id.
 
-## POST /orders
+## POST /orders/new
+Add a new order to the orderbook.
 
 ## PUT /orders/:id
+Update an order by order Id.
 
 ## DELETE /orders/:id
-
-## GET /users
-
-## GET /users/:id
-
-## PUT /users/:id
-
-## DELETE /users/:id
+Remove an order by order Id
 
 ## GET /orderbook
 Retrieves the orderbook for a given asset pair.
