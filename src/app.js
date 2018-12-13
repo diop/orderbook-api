@@ -27,7 +27,7 @@ app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.get('/', (request, response) => response.send({message: `Trustless Token Orderbook API Endpoints`}))
+app.get('/', (request, response) => response.send({message: `OkayRelay Orderbook API Endpoints...`}))
 
 var checkAuth = (request, response, next) => {
     if (typeof request.cookies.nToken === 'undefined' || request.cookies.nToken === null) {
