@@ -37,38 +37,38 @@ wss://api.okayrelay.com/
 * ``` traderAddress ``` [string]: returns orders where either makerAddress or takerAddress has the value specified
 * ``` feeRecipientAddress ``` [string]: returns orders where feeRecipientAddress is feeRecipient address
 
-## POST /api/login
+## POST /login
 ```
 curl -X POST http://api.okayrelay.com/login -i -u foo:bar -d "access_token=API_KEY_HERE"
 
 ```
 
-## POST /api/sign-up
+## POST /sign-up
 ```
 curl -X POST http://api.okayrelay.com/sign-up -i -d "username=foo&password=bar&access_token=API_KEY_HERE"
 
 ```
 
-## GET /api/orders
+## GET /orders
 Retrieves a list of orders given query parameters.
 
-## GET /api/orders/:id
+## GET /orders/:id
 
-## POST /api/orders
+## POST /orders
 
-## PUT /api/orders/:id
+## PUT /orders/:id
 
-## DELETE /api/orders/:id
+## DELETE /orders/:id
 
-## GET /api/users
+## GET /users
 
-## GET /api/users/:id
+## GET /users/:id
 
-## PUT /api/users/:id
+## PUT /users/:id
 
-## DELETE /api/users/:id
+## DELETE /users/:id
 
-## GET /api/orderbook
+## GET /orderbook
 Retrieves the orderbook for a given asset pair.
 
 ### Sample Payload 
