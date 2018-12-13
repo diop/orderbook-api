@@ -31,7 +31,20 @@ We hosts an off-chain orderbook which provides a way for users to add, remove an
 ```
 
 # API Documentation - V 1.0 - 12 December 2018
-* [https://diop.github.io/orderbook-api/](https://diop.github.io/orderbook-api/) 
+* [https://diop.github.io/orderbook-api/](https://diop.github.io/orderbook-api/)
+
+## 0x protocol 2.0.0 specification
+[https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md](https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md)
+
+## HTTP ENDPOINT
+```
+http://api.okayrelay.com/sra/v2/
+```
+
+## WEBSOCKET ENDPOINT
+```
+wss://api.okayrelay.com/sra/v2/
+```
 
 ## Order Specific Parameters:
 

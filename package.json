@@ -19,6 +19,7 @@
   "author": "Fodé Diop",
   "license": "MIT",
   "dependencies": {
+    "@0xproject/json-schemas": "^1.0.7",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
